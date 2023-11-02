@@ -21,6 +21,8 @@ mainSection.appendChild(div4);
 
 
 
+
+
 //Divs inside of div4 -----------------------------------------------------------
 const divInside4Left = document.createElement(`div`);
 divInside4Left.setAttribute(`style`, `background-color:#888888; width:33%; height:100%; margin-bottom:5px; text-align:center`)
@@ -33,6 +35,8 @@ div4.appendChild(divInside4Middle);
 const divInside4Right = document.createElement(`div`);
 divInside4Right.setAttribute(`style`, `background-color:#888888; width:33%; height:100%; margin-bottom:5px; text-align:center`)
 div4.appendChild(divInside4Right);
+
+
 
 
 
@@ -56,16 +60,6 @@ const frelancerName = document.createElement(`h1`);
 frelancerName.textContent=`Name`;
 divInside4Left.appendChild(frelancerName);
 
-
-
-
-
-
-
-
-
-
-
 // Occupation section ----------------------------------------------------------
 const occupation = document.createElement(`h1`);
 occupation.textContent=`Occupation`;
@@ -75,24 +69,6 @@ divInside4Middle.appendChild(occupation);
 const startingPrice = document.createElement(`h1`);
 startingPrice.textContent=`StartingPrice`;
 divInside4Right.appendChild(startingPrice);
-
-// const firstPerson = jobArray[0];
-// if (firstPerson) {
-//   const firstName = firstPerson.name;
-//   console.log(firstName);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -109,24 +85,3 @@ const allH3 = document.querySelectorAll(`h3`);
 allH3.forEach(h3Element => {
   h3Element.setAttribute(`style`, `font-size:1.75rem; margin:5px; font-weight:200`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const jobArray = [
-//   {name: Alice, occupation: Writer, price: $30},
-//   {name: Bob, occupation: Teacher, price: $50},
-//   {name: Carol, occupation: Programmer, price: $70},
-// ];
-
-
