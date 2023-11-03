@@ -52,8 +52,25 @@ header.textContent=`- Freelancer Forum -`;
 div1.appendChild(header);
 
 // Average price section --------------------------------------------------------
+const averageStartingPrice = (ele) => {
+  let sum = 0;
+  for(let key in ele) {
+    const person = ele[key];
+    const startPay = person.startingpay;
+    sum += startPay;
+  }
+  // console.log(sum);
+  const numberOfPeople = Object.keys(ele).length;
+  const avg = sum / numberOfPeople;
+
+  return avg;
+};
+
+const theAvg = averageStartingPrice(hiringPool);
+// console.log(theAvg);
+
 const averageHeader = document.createElement(`h3`);
-averageHeader.textContent=`The average starting price is $30`;  // will come back to change out the price with a ${sum}
+averageHeader.textContent=`The average starting price is $${theAvg}`;  // DONE - will come back to change out the price with a ${sum}
 div2.appendChild(averageHeader);
 
 // Available freelancers section ------------------------------------------------
@@ -155,5 +172,9 @@ allH1.forEach(h1Element => {
 // All h3 elements -------------------------------------------------------------
 const allH3 = document.querySelectorAll(`h3`);
 allH3.forEach(h3Element => {
-  h3Element.setAttribute(`style`, `font-size:1.75rem; margin:5px; font-weight:200`);
+  h3Element.setAttribute(`style`, `padding:10px; font-size:1.75rem; margin:5px; font-weight:200`);
 });
+
+
+
+
